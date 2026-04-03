@@ -1,0 +1,33 @@
+extends layout
+
+//- style="background: green"
+
+block main-content
+
+    p(id="instructions") Create a colour pallete to work from, and get all colour information needed related to it. Below the palette you can find CSS variables you can copy into your :root section of your css file.
+
+    div(class="colorArray")
+        each color in colors
+            div(class="colorEntry")
+                each c in color
+                    h3 #{c.colorName}
+                    div(
+                        class="colorSquare"
+                        style="background: " + c.hex
+                    )
+                    p hex: #{c.hex}
+                    p rgb: #{c.rgb}
+                    p cmyk: #{c.cmyk}
+                    p hsl: #{c.hsl}
+                    //- button(id="lock" + c.colorId) lock
+    
+    p Variables for CSS:
+    div(class="cssArray")
+        p :root &#123;
+        each color in colors
+            each c in color 
+                p --color-#{c.colorId + 1}: #{c.hex};
+        p &#125;
+
+
+        

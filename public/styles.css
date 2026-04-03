@@ -1,0 +1,55 @@
+.header-content
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#instructions
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.colorArray
+{
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    justify-content: center;
+}
+
+.colorEntry
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.colorEntry h3
+{
+    align-self: center;
+    margin: 8px 0;
+}
+
+.colorEntry p
+{
+    margin: 2px 0 2px 5px;
+}
+
+.colorSquare
+{
+    width: 200px;
+    height: 200px;
+}
+
+.cssArray
+{
+    background-color: #bebebe;
+}
+
+.cssArray p
+{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 2px 0px;
+}
