@@ -128,8 +128,14 @@ function lockColor()
     console.log("button locked");
 }
 
+function copyToClipboard()
+{
+    return false;
+}
+
 export default
 {
     getColours,
-    lockColor
+    lockColor,
+    copyToClipboard
 };

@@ -1,17 +1,56 @@
+/* 1. BASICS */
+
+html
+{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+body
+{
+    margin: 0;
+}
+
+h1
+{
+    font-size: 3em;
+    margin: 15px 0;
+}
+
+/* 2. LAYOUTS */
+
+/* 2a. HEADER */
+
 .header-content
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: #000;
 }
+
+.header-content h1
+{
+    background: 
+        linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red, violet);
+    animation: textAnim 10s linear infinite;
+    background-clip: text;
+    background-size: 400% 100%;
+    color: transparent;
+}
+
+/* 2b. BODY */
 
 #instructions
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-size: 1.5em;
+    padding: 0 10%;
 }
 
+/* area for random colour palette */
 .colorArray
 {
     display: grid;
@@ -19,6 +58,7 @@
     justify-content: center;
 }
 
+/* For each of the 5 entries */
 .colorEntry
 {
     display: flex;
@@ -26,30 +66,76 @@
     justify-content: center;
 }
 
+/* align name of each colour to it's center */
 .colorEntry h3
 {
     align-self: center;
     margin: 8px 0;
 }
 
+/* nudge the text a bit for spacing for all the info for each color's info */
 .colorEntry p
 {
     margin: 2px 0 2px 5px;
 }
 
+/* a square of colour */
 .colorSquare
 {
     width: 200px;
     height: 200px;
 }
 
-.cssArray
+/* for border around each color's info */
+.colorInfo
 {
-    background-color: #bebebe;
+    border: 1px solid #d9d9d9;
+    border-top: transparent;
 }
 
+/* Area for CSS Copy & Paste */
+.cssArea
+{
+    margin: 0 15% 10px 15%;
+}
+
+/* styling for the CSS copy & paste area */
+.cssArray
+{
+    background-color: #d9d9d9;
+    padding: 5px;
+}
+
+/* change font to courier for css variables */
 .cssArray p
 {
     font-family: 'Courier New', Courier, monospace;
     margin: 2px 0px;
+}
+
+/* 2c. FOOTER */
+footer
+{
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+footer p
+{
+    color: #fff;
+}
+
+/* 3. ANIMATION */
+@keyframes textAnim
+{
+    0%
+    {
+        background-position: 0 0;
+    }
+
+    100% 
+    {
+        background-position: 134% 0;
+    }
 }

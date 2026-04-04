@@ -1,10 +1,8 @@
 extends layout
 
-//- style="background: green"
-
 block main-content
 
-    p(id="instructions") Create a colour pallete to work from, and get all colour information needed related to it. Below the palette you can find CSS variables you can copy into your :root section of your css file.
+    p(id="instructions") Create a randomized colour pallete to work from, and get all colour information needed related to it. Below the palette you can find CSS variables you can copy into your :root section of your css file.
 
     div(class="colorArray")
         each color in colors
@@ -15,19 +13,20 @@ block main-content
                         class="colorSquare"
                         style="background: " + c.hex
                     )
-                    p hex: #{c.hex}
-                    p rgb: #{c.rgb}
-                    p cmyk: #{c.cmyk}
-                    p hsl: #{c.hsl}
-                    //- button(id="lock" + c.colorId) lock
+                    div(class="colorInfo")
+                        p HEX: #{c.hex}
+                        p RGB: #{c.rgb}
+                        p CMYK: #{c.cmyk}
+                        p HLS: #{c.hsl}
     
-    p Variables for CSS:
-    div(class="cssArray")
-        p :root &#123;
-        each color in colors
-            each c in color 
-                p --color-#{c.colorId + 1}: #{c.hex};
-        p &#125;
+    div(class="cssArea")
+        h2 Variables for CSS:
+        div(class="cssArray")
+            p :root &#123;
+            each color in colors
+                each c in color 
+                    p --color-#{c.colorId + 1}: #{c.hex};
+            p &#125;
 
 
         

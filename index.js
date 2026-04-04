@@ -24,9 +24,6 @@ app.get("/", async (req, res) =>
     res.render("index", {colors: colorList});
 });
 
-//event listeners
-
-
 //setup server listening
 app.listen(port, () => 
 {
